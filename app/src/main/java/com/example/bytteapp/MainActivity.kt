@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,7 +14,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -43,7 +46,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun AppFrontPage(){
+fun AppFrontPage() {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -60,6 +63,14 @@ fun AppFrontPage(){
                     .padding(top = 50.dp)
             )
 
+            Image(
+                painterResource(R.drawable.profile),
+                contentDescription = "Profile",
+                modifier = Modifier
+                    .size(50.dp)
+                    .offset(x = 340.dp, y = (-40).dp)
+                    .clickable() {}
+            )
             LazyVerticalGrid(
                 columns = GridCells.FixedSize(190.dp),
                 horizontalArrangement = Arrangement.Center
