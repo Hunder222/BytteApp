@@ -85,7 +85,7 @@ fun AppFrontPage() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(75.dp)
-                .background(color = Color.LightGray)
+                .background(color = Color(0xFFA93319))
                 .align(alignment = Alignment.BottomStart)
         ) {
             val navIconSpacing = 10.dp
@@ -135,11 +135,11 @@ fun Article() {
         ) {
             // Image card
             Image(
-                painterResource(R.drawable.ic_launcher_foreground),
+                painterResource(R.drawable.magnolia),
                 contentDescription = "Lol",
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(300.dp)
+                    .height(250.dp)
                     .background(
                         color = Color.LightGray,
                         shape = RoundedCornerShape(20.dp)
@@ -154,16 +154,24 @@ fun Article() {
             ) {
                 // Title
                 Text(
-                    text = "Lorem Ipsum",
+                    text = "Magnolia",
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
                         .padding(top = 5.dp)
                 )
 
-                // Description
+                // Set-type
                 Text(
-                    text = "Quisque ut dolor gravida, placerat libero vel, euismod.",
+                    text = "Botanicals",
+                    fontSize = 10.sp,
+                    modifier = Modifier
+                        .padding(top = 5.dp)
+                )
+
+                // brick-count
+                Text(
+                    text = "435 bricks",
                     fontSize = 10.sp,
                     modifier = Modifier
                         .padding(top = 5.dp)
