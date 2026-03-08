@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -63,14 +64,6 @@ fun AppFrontPage() {
                     .padding(top = 50.dp)
             )
 
-            Image(
-                painterResource(R.drawable.profile),
-                contentDescription = "Profile",
-                modifier = Modifier
-                    .size(50.dp)
-                    .offset(x = 340.dp, y = (-40).dp)
-                    .clickable() {}
-            )
             LazyVerticalGrid(
                 columns = GridCells.FixedSize(190.dp),
                 horizontalArrangement = Arrangement.Center
@@ -91,27 +84,28 @@ fun AppFrontPage() {
             val navIconSpacing = 10.dp
 
             Image(
-                painterResource(R.drawable.stud),
+                painterResource(R.drawable.home),
+                contentDescription = "Home",
+                modifier = Modifier.padding(navIconSpacing)
+
+            )
+            Image(
+                painterResource(R.drawable.search),
                 contentDescription = "Home",
                 modifier = Modifier.padding(navIconSpacing)
             )
             Image(
-                painterResource(R.drawable.stud),
+                painterResource(R.drawable.chat),
                 contentDescription = "Home",
                 modifier = Modifier.padding(navIconSpacing)
             )
             Image(
-                painterResource(R.drawable.stud),
+                painterResource(R.drawable.fav),
                 contentDescription = "Home",
                 modifier = Modifier.padding(navIconSpacing)
             )
             Image(
-                painterResource(R.drawable.stud),
-                contentDescription = "Home",
-                modifier = Modifier.padding(navIconSpacing)
-            )
-            Image(
-                painterResource(R.drawable.stud),
+                painterResource(R.drawable.profile),
                 contentDescription = "Home",
                 modifier = Modifier.padding(navIconSpacing)
             )
